@@ -1,6 +1,3 @@
 {
-    "parent": "minecraft:item/generated",
-    "textures": {
-        "layer0": "al-fredo:item/plant_bomb"
-    }
+    "parent": "al-fredo:block/plant_bomb"
 }
