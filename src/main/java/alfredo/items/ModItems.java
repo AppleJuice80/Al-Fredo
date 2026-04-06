@@ -25,9 +25,11 @@ public class ModItems {
     public static void registerModItems() {
         AlFredo.LOGGER.info("Registering Mod Items for " + AlFredo.MOD_ID);
 
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(entries -> {
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.COMBAT).register(entries -> {
             entries.add(THRUST_BOMB);
-            entries.add(PLANT_BOMB);
         });
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.FUNCTIONAL_BLOCKS).register(entries -> {
+            entries.add(PLANT_BOMB);
+        })
     }
 }
