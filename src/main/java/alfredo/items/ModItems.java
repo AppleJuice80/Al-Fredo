@@ -31,5 +31,5 @@ public class ModItems {
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(entries -> {
             entries.add(PLANT_BOMB);
         });
-    }
+    }// sus
 }
