@@ -21,6 +21,6 @@ public class AlFredo implements ModInitializer {
 		// Proceed with mild caution.
 
 		LOGGER.info("Hello Fabric world!");
-		ModItems.registerModItems();// super sussy comment e
+		ModItems.registerModItems();
 	}
 }
