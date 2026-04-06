@@ -26,7 +26,7 @@ public class ModItems {
         AlFredo.LOGGER.info("Registering Mod Items for " + AlFredo.MOD_ID);
 
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(entries -> {
-            entries.add(THRUST_BOMB);
+            entries.add(THRUST_BOMB);// maximum thrust efficiency
             entries.add(PLANT_BOMB);
         });
     }
