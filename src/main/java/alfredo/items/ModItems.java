@@ -14,6 +14,9 @@ public class ModItems {
     public static final Item THRUST_BOMB = registerItem("thrust_bomb");
     public static final Item PLANT_BOMB = registerItem("plant_bomb");
 
+    public static final Item NEW_AND_IMPROVED_STATE_OF_THE_ART_LIFE_VEST = registerItem(
+            "new_and_improved_state_of_the_art_life_vest");
+
     private static Item registerItem(String name) {
         Identifier id = Identifier.of(AlFredo.MOD_ID, name);
         RegistryKey<Item> key = RegistryKey.of(RegistryKeys.ITEM, id);
@@ -27,9 +30,10 @@ public class ModItems {
 
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.COMBAT).register(entries -> {
             entries.add(THRUST_BOMB);
+            entries.add(NEW_AND_IMPROVED_STATE_OF_THE_ART_LIFE_VEST);
         });
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(entries -> {
             entries.add(PLANT_BOMB);
         });
-    }// sus
+    }
 }
