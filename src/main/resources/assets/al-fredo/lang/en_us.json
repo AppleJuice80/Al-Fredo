@@ -1,7 +1,9 @@
 {
-    "item.al-fredo.thrust_bomb": "Thrust Bomb",
-    "item.al-fredo.plant_bomb": "Plant Bomb",
-    "item.al-fredo.new_and_improved_state_of_the_art_life_vest": "New and Improved State of the Art Life Vest",
-    "item.al-fredo.backpack": "Backpack",
-    "block.al-fredo.plant_bomb": "Plant Bomb Block"
+	"item.al-fredo.thrust_bomb": "Thrust Bomb",
+	"item.al-fredo.plant_bomb": "Plant Bomb",
+	"item.al-fredo.new_and_improved_state_of_the_art_life_vest": "New and Improved State of the Art Life Vest",
+	"item.al-fredo.backpack": "Backpack",
+
+	"block.al-fredo.plant_bomb": "Plant Bomb Block",
+	"block.al-fredo.wire": "Wire"
 }

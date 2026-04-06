@@ -1,6 +1,11 @@
 {
     "parent": "minecraft:block/cube_all",
     "textures": {
-        "all": "al-fredo:block/plant_bomb"
+        "north": "al-fredo:block/plant_bomb",
+        "south": "al-fredo:block/plant_bomb",
+        "east": "al-fredo:block/plant_bomb",
+        "west": "al-fredo:block/plant_bomb",
+        "up": "al-fredo:block/plant_bomb",
+        "down": "al-fredo:block/plant_bomb"
     }
 }
