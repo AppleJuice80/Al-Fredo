@@ -3,9 +3,9 @@
 	"id": "al-fredo",
 	"version": "${version}",
 	"name": "Al-Fredo",
-	"description": "This is an example description! Tell everyone what your mod is about!",
+	"description": "This mod implements the lore of Al-Fredo, the most glorious DIY terrorist organization to exist. Est. February 2024, Copyright Robert Albetel, Andres Jandeska, William Melling, Vincent Knight, Phoenix Messer, Silas Nguyen",
 	"authors": [
-		"Me!"
+		"AppleJuice80"
 	],
 	"contact": {
 		"homepage": "https://fabricmc.net/",
