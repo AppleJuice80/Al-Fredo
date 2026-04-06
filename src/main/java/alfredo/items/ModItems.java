@@ -12,6 +12,7 @@ import net.minecraft.util.Identifier;
 
 public class ModItems {
     public static final Item THRUST_BOMB = registerItem("thrust_bomb");
+    public static final Item PLANT_BOMB = registerItem("plant_bomb");
 
     private static Item registerItem(String name) {
         Identifier id = Identifier.of(AlFredo.MOD_ID, name);
@@ -26,6 +27,7 @@ public class ModItems {
 
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(entries -> {
             entries.add(THRUST_BOMB);
+            entries.add(PLANT_BOMB);
         });
     }
 }
