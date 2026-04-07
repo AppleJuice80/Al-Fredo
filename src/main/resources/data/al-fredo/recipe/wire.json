@@ -1,0 +1,12 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "category": "ingredients",
+    "ingredients": [
+        "minecraft:string",
+        "minecraft:copper_nugget"
+    ],
+    "result": {
+        "count": 2,
+        "id": "al-fredo:wire"
+    }
+}

@@ -1,0 +1,17 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "category": "functional",
+    "key": {
+        "O": "al-fredo:thrust_bomb",
+        "I": "al-fredo:wire"
+    },
+    "pattern": [
+        "IOI",
+        "OIO",
+        "IOI"
+    ],
+    "result": {
+        "count": 1,
+        "id": "al-fredo:plant_bomb"
+    }
+}

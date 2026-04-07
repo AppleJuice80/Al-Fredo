@@ -1,0 +1,18 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "category": "combat",
+    "key": {
+        "O": "minecraft:leather_chestplate",
+        "Q": "al-fredo:thrust_bomb",
+        "I": "al-fredo:wire"
+    },
+    "pattern": [
+        "IQI",
+        "QOQ",
+        "IQI"
+    ],
+    "result": {
+        "count": 1,
+        "id": "al-fredo:new_and_improved_state_of_the_art_life_vest"
+    }
+}
