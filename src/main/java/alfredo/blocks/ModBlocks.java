@@ -16,7 +16,7 @@ import net.minecraft.util.Identifier;
 
 public class ModBlocks {
 	public static final Block PLANT_BOMB = registerBlock("plant_bomb",
-			AbstractBlock.Settings.create().strength(4f).requiresTool().sounds(BlockSoundGroup.GRASS));
+			AbstractBlock.Settings.create().strength(0.25f).sounds(BlockSoundGroup.GRASS));// before sounds, .requiresTool()
 	
 	public static final Block WIRE = registerBlock("wire",
 			AbstractBlock.Settings.create().sounds(BlockSoundGroup.WOOD));

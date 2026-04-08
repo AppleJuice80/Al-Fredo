@@ -1,0 +1,57 @@
+{
+    "type": "minecraft:block",
+    "pools": [
+        {
+            "entries": [
+                {
+                    "type": "minecraft:alternatives",
+                    "children": [
+                        {
+                            "type": "minecraft:item",
+                            "conditions": [
+                                {
+                                    "condition": "minecraft:match_tool"
+                                }
+                            ],
+                            "name": "al-fredo:plant_bomb"
+                        },
+                        {
+                            "type": "minecraft:group",
+                            "children": [
+                                {
+                                    "type": "minecraft:item",
+                                    "functions": [
+                                        {
+                                            "add": false,
+                                            "count": {
+                                                "type": "minecraft:constant",
+                                                "value": 3
+                                            },
+                                            "function": "minecraft:set_count"
+                                        }
+                                    ],
+                                    "name": "al-fredo:thrust_bomb"
+                                },
+                                {
+                                    "type": "minecraft:item",
+                                    "functions": [
+                                        {
+                                            "add": false,
+                                            "count": {
+                                                "type": "minecraft:constant",
+                                                "value": 2
+                                            },
+                                            "function": "minecraft:set_count"
+                                        }
+                                    ],
+                                    "name": "al-fredo:wire"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "rolls": 1.0
+        }
+    ]
+}
