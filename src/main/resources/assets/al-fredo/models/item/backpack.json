@@ -1,6 +1,22 @@
 {
     "parent": "minecraft:item/generated",
     "textures": {
-        "layer0": "al-fredo:item/backpack"
-    }
+        "layer0": "al-fredo:item/backpack",
+        "particle": "alfredo:item/backpack"
+    },
+    "display": {
+        "thirdperson_righthand": {
+            "rotation": [75, -30, 0],
+			"translation": [1.25, -2, -5]
+		},
+		"thirdperson_lefthand": {
+            "rotation": [75, -30, 0],
+			"translation": [1.25, -2, -5]
+		}
+    },
+    "groups": [
+        {
+            "name": "thrustable_explosive"
+        }
+    ]
 }

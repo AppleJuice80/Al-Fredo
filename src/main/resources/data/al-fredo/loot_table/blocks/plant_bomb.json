@@ -1,105 +1,105 @@
 {
-    "type": "minecraft:block",
-    "pools": [
-        {
-            "entries": [
-                {
-                    "type": "minecraft:alternatives",
-                    "children": [
-                        {
-                            "type": "minecraft:item",
-                            "conditions": [
-                                {
-                                    "condition": "minecraft:match_tool",
-                                    "predicate": {
-                                        "items": [
-                                            "minecraft:iron_pickaxe",
-                                            "minecraft:diamond_pickaxe",
-                                            "minecraft:netherite_pickaxe"
-                                        ]
-                                    }
-                                }
-                            ],
-                            "name": "al-fredo:plant_bomb"
-                        },
-                        {
-                            "type": "minecraft:group",
-                            "children": [
-                                {
-                                    "type": "minecraft:item",
-                                    "functions": [
-                                        {
-                                            "add": false,
-                                            "count": {
-                                                "type": "minecraft:constant",
-                                                "value": 3
-                                            },
-                                            "function": "minecraft:set_count"
-                                        }
-                                    ],
-                                    "name": "al-fredo:thrust_bomb"
-                                }
-                            ]
-                        }
-                    ]
-                }
-            ],
-            "rolls": 1.0
-        },
-        {
-            "entries": [
-                {
-                    "type": "minecraft:alternatives",
-                    "children": [
-                        {
-                            "type": "minecraft:item",
-                            "conditions": [
-                                {
-                                    "condition": "minecraft:match_tool",
-                                    "predicate": {
-                                        "items": [
-                                            "minecraft:iron_pickaxe",
-                                            "minecraft:diamond_pickaxe",
-                                            "minecraft:netherite_pickaxe"
-                                        ]
-                                    }
-                                }
-                            ],
-                            "functions": [
-                                {
-                                    "add": false,
-                                    "count": {
-                                        "type": "minecraft:constant",
-                                        "value": 0
-                                    },
-                                    "function": "minecraft:set_count"
-                                }
-                            ],
-                            "name": "al-fredo:plant_bomb"
-                        },
-                        {
-                            "type": "minecraft:group",
-                            "children": [
-                                {
-                                    "type": "minecraft:item",
-                                    "functions": [
-                                        {
-                                            "add": false,
-                                            "count": {
-                                                "type": "minecraft:constant",
-                                                "value": 2
-                                            },
-                                            "function": "minecraft:set_count"
-                                        }
-                                    ],
-                                    "name": "al-fredo:wire"
-                                }
-                            ]
-                        }
-                    ]
-                }
-            ],
-            "rolls": 1.0
-        }
-    ]
+	"type": "minecraft:block",
+	"pools": [
+		{
+			"entries": [
+				{
+					"type": "minecraft:alternatives",
+					"children": [
+						{
+							"type": "minecraft:item",
+							"conditions": [
+								{
+									"condition": "minecraft:match_tool",
+									"predicate": {
+										"items": [
+											"minecraft:iron_pickaxe",
+											"minecraft:diamond_pickaxe",
+											"minecraft:netherite_pickaxe"
+										]
+									}
+								}
+							],
+							"name": "al-fredo:plant_bomb"
+						},
+						{
+							"type": "minecraft:group",
+							"children": [
+								{
+									"type": "minecraft:item",
+									"functions": [
+										{
+											"add": false,
+											"count": {
+												"type": "minecraft:constant",
+												"value": 3
+											},
+											"function": "minecraft:set_count"
+										}
+									],
+									"name": "al-fredo:thrust_bomb"
+								}
+							]
+						}
+					]
+				}
+			],
+			"rolls": 1.0
+		},
+		{
+			"entries": [
+				{
+					"type": "minecraft:alternatives",
+					"children": [
+						{
+							"type": "minecraft:item",
+							"conditions": [
+								{
+									"condition": "minecraft:match_tool",
+									"predicate": {
+										"items": [
+											"minecraft:iron_pickaxe",
+											"minecraft:diamond_pickaxe",
+											"minecraft:netherite_pickaxe"
+										]
+									}
+								}
+							],
+							"functions": [
+								{
+									"add": false,
+									"count": {
+										"type": "minecraft:constant",
+										"value": 0
+									},
+									"function": "minecraft:set_count"
+								}
+							],
+							"name": "al-fredo:plant_bomb"
+						},
+						{
+							"type": "minecraft:group",
+							"children": [
+								{
+									"type": "minecraft:item",
+									"functions": [
+										{
+											"add": false,
+											"count": {
+												"type": "minecraft:constant",
+												"value": 2
+											},
+											"function": "minecraft:set_count"
+										}
+									],
+									"name": "al-fredo:wire"
+								}
+							]
+						}
+					]
+				}
+			],
+			"rolls": 1.0
+		}
+	]
 }

@@ -1,6 +1,7 @@
 {
     "parent": "minecraft:block/cube_all",
     "textures": {
-        "all": "al-fredo:block/redstone"
+        "all": "al-fredo:block/redstone",
+        "particle": "alfredo:item/wire"
     }
 }

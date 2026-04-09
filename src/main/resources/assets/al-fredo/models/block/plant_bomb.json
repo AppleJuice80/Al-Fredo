@@ -6,6 +6,7 @@
         "east": "al-fredo:block/plant_bomb",
         "west": "al-fredo:block/plant_bomb",
         "up": "al-fredo:block/plant_bomb",
-        "down": "al-fredo:block/plant_bomb"
+        "down": "al-fredo:block/plant_bomb",
+        "particle": "alfredo:block/plant_bomb"
     }
 }

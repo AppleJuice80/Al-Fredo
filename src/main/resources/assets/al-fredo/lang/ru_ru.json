@@ -6,5 +6,8 @@
 	"item.al-fredo.wire": "Провод",
 
 	"block.al-fredo.plant_bomb": "Бомб для заложения block",
-	"block.al-fredo.wire": "Провод"
+	"block.al-fredo.wire": "Провод",
+
+	"entity.al-fredo.thrust_bomb": "Бомб для бросания",
+	"entity.al-fredo.backpack": "Рюкзак"
 }

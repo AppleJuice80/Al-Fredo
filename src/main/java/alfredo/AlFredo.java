@@ -5,6 +5,8 @@ import org.slf4j.LoggerFactory;
 
 import alfredo.items.ModItems;
 import alfredo.blocks.ModBlocks;
+import alfredo.entities.ModEntities;
+
 import net.fabricmc.api.ModInitializer;
 
 public class AlFredo implements ModInitializer {
@@ -24,5 +26,6 @@ public class AlFredo implements ModInitializer {
 		LOGGER.info("Hello Fabric world!");
 		ModItems.registerModItems();
 		ModBlocks.registerModBlocks();
+		ModEntities.registerModEntities();
 	}
 }

@@ -1,6 +1,20 @@
 {
     "parent": "minecraft:item/generated",
     "textures": {
-        "layer0": "al-fredo:item/thrust_bomb"
-    }
+        "layer0": "al-fredo:item/thrust_bomb",
+        "particle": "al-fredo:item/thrust_bomb"
+    },
+    "display": {
+        "thirdperson_righthand": {
+			"translation": [0, 3.75, 1.5]
+		},
+		"thirdperson_lefthand": {
+			"translation": [0, 3.75, 1.5]
+		}
+    },
+    "groups": [
+        {
+            "name": "thrustable_explosive"
+        }
+    ]
 }
