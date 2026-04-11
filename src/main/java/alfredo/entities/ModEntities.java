@@ -9,8 +9,8 @@ import net.minecraft.entity.SpawnGroup;
 
 import net.minecraft.registry.Registry;
 import net.minecraft.registry.Registries;
-import net.minecraft.registry.RegistryKey;//import net.minecraft.entity.Entity;
-import net.minecraft.registry.RegistryKeys;//import net.minecraft.registry.BuiltinRegistries;
+import net.minecraft.registry.RegistryKey;
+import net.minecraft.registry.RegistryKeys;
 
 import net.minecraft.util.Identifier;
 

@@ -1,6 +1,5 @@
 package alfredo.items.custom;
 
-import alfredo.AlFredo;
 import alfredo.entities.custom.ThrustBombProjectileEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
@@ -32,7 +31,7 @@ public class ThrustBombItem extends Item {
 		if (!user.getAbilities().creativeMode) {
 			item_stack.decrement(1);
 		}
-		AlFredo.LOGGER.info("Yo someone used ts (ts = a Thrust Bomb).");
+		
 		return ActionResult.SUCCESS;
 	}
 }
