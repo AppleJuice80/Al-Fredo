@@ -1,5 +1,6 @@
 package alfredo.items.custom;
 
+import alfredo.AlFredo;
 import alfredo.entities.custom.ThrustBombProjectileEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
@@ -22,7 +23,7 @@ public class ThrustBombItem extends Item {
 		world.playSound(null, user.getX(), user.getY(), user.getZ(), SoundEvents.ENTITY_SNOWBALL_THROW,
 				SoundCategory.NEUTRAL, 0.5f, 0.4f);
 		if (!world.isClient()) {
-			ThrustBombProjectileEntity thrust_bomb = new ThrustBombProjectileEntity(world, user);//new ThrustBombProjectileEntity(world, user);
+			ThrustBombProjectileEntity thrust_bomb = new ThrustBombProjectileEntity(world, user);
 			thrust_bomb.setVelocity(user, user.getPitch(), user.getYaw(), 0.0f, 1.5f, 0f);
 			world.spawnEntity(thrust_bomb);
 		}
@@ -31,7 +32,7 @@ public class ThrustBombItem extends Item {
 		if (!user.getAbilities().creativeMode) {
 			item_stack.decrement(1);
 		}
-
+		AlFredo.LOGGER.info("Yo someone used ts (ts = a Thrust Bomb).");
 		return ActionResult.SUCCESS;
 	}
 }

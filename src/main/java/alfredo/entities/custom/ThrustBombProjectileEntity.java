@@ -14,7 +14,7 @@ public class ThrustBombProjectileEntity extends ThrownItemEntity {
 	public ThrustBombProjectileEntity(EntityType<? extends ThrownItemEntity> entity_type, World world) {
 		super(entity_type, world);
 	}
-	
+
 	public ThrustBombProjectileEntity(World world, PlayerEntity player) {
 		super(ModEntities.THRUST_BOMB, player, world, new ItemStack(ModItems.THRUST_BOMB));
 	}

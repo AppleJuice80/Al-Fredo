@@ -1,5 +1,6 @@
 {
     "parent": "minecraft:item/generated",
+    "texture_size": [16, 16],
     "textures": {
         "layer0": "al-fredo:item/thrust_bomb",
         "particle": "al-fredo:item/thrust_bomb"

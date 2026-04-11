@@ -2,18 +2,15 @@ package alfredo.entities.client;
 
 import alfredo.AlFredo;
 import alfredo.entities.custom.BackpackProjectileEntity;
-
-import net.minecraft.client.render.item.ItemRenderer;
+import net.minecraft.client.render.OverlayTexture;
+import net.minecraft.client.render.command.OrderedRenderCommandQueue;
 import net.minecraft.client.render.entity.EntityRenderer;
 import net.minecraft.client.render.entity.EntityRendererFactory;
 import net.minecraft.client.render.entity.state.ProjectileEntityRenderState;
-import net.minecraft.client.render.VertexConsumer;
-import net.minecraft.client.render.VertexConsumerProvider;
-import net.minecraft.client.render.OverlayTexture;
+import net.minecraft.client.render.state.CameraRenderState;
 import net.minecraft.client.util.math.MatrixStack;
-
 import net.minecraft.util.Identifier;
-
+import net.minecraft.util.math.RotationAxis;
 
 public class BackpackProjectileRenderer
 		extends EntityRenderer<BackpackProjectileEntity, ProjectileEntityRenderState> {
@@ -26,31 +23,21 @@ public class BackpackProjectileRenderer
 
 	@Override
 	public ProjectileEntityRenderState createRenderState() {
-		return null;
+		return new ProjectileEntityRenderState();
 	}
 
-	//@Override
-	public void render(BackpackProjectileEntity entity, float yaw, float tick_delta, MatrixStack matrices,
-			VertexConsumerProvider vertex_consumers, int light) {
+	@Override
+	public void render(ProjectileEntityRenderState render_state, MatrixStack matrices, OrderedRenderCommandQueue queue, CameraRenderState camera_state) {
 		matrices.push();
 
-		VertexConsumer vertex_consumer = ItemRenderer.getItemGlintConsumer(vertex_consumers,
+		matrices.translate(0.0F, 0.15F, 0.0F);
+		matrices.multiply(RotationAxis.POSITIVE_Y.rotationDegrees(render_state.yaw - 90.0F));
+		matrices.multiply(RotationAxis.POSITIVE_Z.rotationDegrees(render_state.pitch));
+		queue.submitModel(this.model, render_state, matrices,
 				this.model.getLayer(Identifier.of(AlFredo.MOD_ID, "textures/entity/backpack/backpack.png")),
-				false, false);
-		this.model.render(matrices, vertex_consumer, light, OverlayTexture.DEFAULT_UV);
+				render_state.light, OverlayTexture.DEFAULT_UV, render_state.outlineColor, null);
 
 		matrices.pop();
-		//super.render(entity, yaw, tick_delta, matrices, vertex_consumers, light);
-		//super.render(this.createRenderState(), matrices, vertex_consumers, light);
-	}
-	
-	//@Override
-	public Identifier getTexture(BackpackProjectileEntity entity) {
-		return Identifier.of(AlFredo.MOD_ID, "textures/entity/backpack/backpack.png");
-	}
-
-	//@Override
-	public Identifier getTexture(ProjectileEntityRenderState render_state) {
-		return Identifier.of(AlFredo.MOD_ID, "textures/entity/backpack/backpack.png");
+		super.render(render_state, matrices, queue, camera_state);
 	}
 }

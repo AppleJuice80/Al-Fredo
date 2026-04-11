@@ -43,5 +43,8 @@ public class ModBlocks {
 		ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(entries -> {
 			entries.add(WIRE);
 		});
+		ItemGroupEvents.modifyEntriesEvent(ItemGroups.FUNCTIONAL).register(entries -> {
+			entries.add(PLANT_BOMB);
+		});
 	}
 }

@@ -1,15 +1,16 @@
 package alfredo.entities.client;
 
 import alfredo.AlFredo;
-import alfredo.entities.custom.BackpackProjectileEntity;
-
-import net.minecraft.client.model.*;
-import net.minecraft.client.render.VertexConsumer;
+import net.minecraft.client.model.Dilation;
+import net.minecraft.client.model.ModelData;
+import net.minecraft.client.model.ModelPart;
+import net.minecraft.client.model.ModelPartBuilder;
+import net.minecraft.client.model.ModelPartData;
+import net.minecraft.client.model.ModelTransform;
+import net.minecraft.client.model.TexturedModelData;
 import net.minecraft.client.render.entity.model.EntityModel;
 import net.minecraft.client.render.entity.model.EntityModelLayer;
 import net.minecraft.client.render.entity.state.ProjectileEntityRenderState;
-import net.minecraft.client.util.math.MatrixStack;
-
 import net.minecraft.util.Identifier;
 
 public class BackpackProjectileModel extends EntityModel<ProjectileEntityRenderState> {
@@ -48,16 +49,5 @@ public class BackpackProjectileModel extends EntityModel<ProjectileEntityRenderS
 				ModelTransform.of(0.0f, -1.5f, -0.0f, 0.0f, -0.7854f, 0.0f));
 
 		return TexturedModelData.of(model_data, 16, 16);
-	}
-	
-	//@Override
-	public void setAngles(BackpackProjectileEntity entity, float limb_swing, float limb_swing_amount,
-			float age_in_ticks, float net_head_yaw, float head_pitch) {
-
-	}
-	
-	//@Override
-	public void Render(MatrixStack matrices, VertexConsumer vertex_consumer, int light, int overlay, int color) {
-		backpack.render(matrices, vertex_consumer, light, overlay, color);
 	}
 }

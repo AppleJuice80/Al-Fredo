@@ -23,13 +23,14 @@ public class ModItems {
 		Identifier id = Identifier.of(AlFredo.MOD_ID, name);
 		RegistryKey<Item> key = RegistryKey.of(RegistryKeys.ITEM, id);
 		Item.Settings settings = new Item.Settings().registryKey(key);
-
+		
 		switch (name) {
 			case "thrust_bomb":
 				return Registry.register(Registries.ITEM, id, new ThrustBombItem(settings.maxCount(32)));
 			case "backpack":
 				return Registry.register(Registries.ITEM, id, new BackpackItem(settings));
 		}
+		
 		return Registry.register(Registries.ITEM, id, new Item(settings));
 	}
 

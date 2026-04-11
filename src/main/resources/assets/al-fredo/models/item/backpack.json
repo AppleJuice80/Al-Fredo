@@ -1,8 +1,9 @@
 {
     "parent": "minecraft:item/generated",
+    "texture_size": [16, 16],
     "textures": {
         "layer0": "al-fredo:item/backpack",
-        "particle": "alfredo:item/backpack"
+        "particle": "al-fredo:item/backpack"
     },
     "display": {
         "thirdperson_righthand": {
