@@ -25,29 +25,18 @@ public class ThrustBombProjectileModel extends EntityModel<ProjectileEntityRende
 	public static TexturedModelData getTexturedModelData() {
 		ModelData model_data = new ModelData();
 		ModelPartData model_part_data = model_data.getRoot();
-		ModelPartData thrust_bomb = model_part_data.addChild("thrust_bomb", ModelPartBuilder.create(),
-				ModelTransform.of(0.0f, 16.5f, 0.0f, 0.0f, 0.0f, 0.0f));
+		model_part_data.addChild("thrust_bomb", ModelPartBuilder.create().cuboid("whole thing", -5f, -6f, 0f, 10f, 12f, 0f, new Dilation(1.0f)),
+				ModelTransform.NONE);//of(0.0f, 16.5f, 0.0f, 0.0f, 0.0f, 0.0f));
 	
-		/*ModelPartData cube_r1 = */thrust_bomb.addChild("cube_r1",
-				ModelPartBuilder.create().uv(8, 7).cuboid(1.5f, 2.5f, -0.5f, 1.0f, 1.0f, 1.0f, new Dilation(0.0f)),
-				ModelTransform.of(0.0f, -7.0f, -4.0f, 0.0f, -1.5708f, 0.0f));
+		/*ModelPartData cube_r1 = *///thrust_bomb.addChild("body",
+				//ModelPartBuilder.create().uv(0, 0).cuboid(3f, 5f, 0f, 10.0f, 9.0f, 0.0f, new Dilation(1.0f)),
+				//ModelTransform.NONE);//of(0.0f, -7.0f, -4.0f, 0.0f, -1.5708f, 0.0f));
 	
-		/*ModelPartData cube_r2 = */thrust_bomb.addChild("cube_r2",
-				ModelPartBuilder.create().uv(7, 9).cuboid(0.5f, -1.5f, -0.5f, 2.0f, 5.0f, 1.0f, new Dilation(0.0f)),
-				ModelTransform.of(0.0f, -7.0f, -5.0f, 0.0f, -1.5708f, 0.0f));
+		/*ModelPartData cube_r2 = *///thrust_bomb.addChild("fuse",
+				//ModelPartBuilder.create().uv(0, 0).cuboid(8.0f, 2.0f, 0.0f, 3.0f, 3.0f, 0.0f, new Dilation(1.0f)),
+				//ModelTransform.NONE);//of(0.0f, -7.0f, -5.0f, 0.0f, -1.5708f, 0.0f));
 	
-		/*ModelPartData cube_r3 = */thrust_bomb.addChild("cube_r3",
-				ModelPartBuilder.create().uv(3, 10).cuboid(-2.5f, -1.5f, -0.5f, 1.0f, 4.0f, 1.0f, new Dilation(0.0f)),
-				ModelTransform.of(0.0f, -7.0f, -5.0f, 0.0f, -1.5708f, 0.0f));
-	
-		/*ModelPartData cube_r4 = */thrust_bomb.addChild("cube_r4",
-				ModelPartBuilder.create().uv(1, 4).cuboid(-2.5f, -1.5f, 0.0f, 5.0f, 3.0f, 0.0f, new Dilation(0.0f)),
-				ModelTransform.of(0.0f, -7.0f, -0.0f, 0.0f, -1.5708f, 0.0f));
-	
-		/*ModelPartData cube_r5 = */thrust_bomb.addChild("cube_r5",
-				ModelPartBuilder.create().uv(18, 1).cuboid(-0.5f, -0.5f, -0.5f, 1.0f, 18.0f, 1.0f, new Dilation(0.0f)),
-				ModelTransform.of(0.0f, -1.5f, -0.0f, 0.0f, -0.7854f, 0.0f));
 		
-		return TexturedModelData.of(model_data, 16, 16);
+		return TexturedModelData.of(model_data, 10, 12);// width, height
 	}
 }

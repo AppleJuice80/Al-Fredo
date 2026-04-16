@@ -30,7 +30,7 @@ public class BackpackProjectileEntity extends ThrownItemEntity {
 		
 		if (!this.getEntityWorld().isClient()) {
 			this.getEntityWorld().sendEntityStatus(this, (byte)3);
-			this.getEntityWorld().createExplosion(this, this.getX(), this.getY(), this.getZ(), 9.0f, true, World.ExplosionSourceType.TNT);
+			this.getEntityWorld().createExplosion(this, this.getX(), this.getY(), this.getZ(), 7.5f, true, World.ExplosionSourceType.TNT);
 			this.discard();
 		}
 	}

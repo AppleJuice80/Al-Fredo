@@ -14,10 +14,8 @@ import net.minecraft.util.Identifier;
 
 public class ModItems {
 	public static final Item THRUST_BOMB = registerItem("thrust_bomb");
-	public static final Item NEW_AND_IMPROVED_STATE_OF_THE_ART_LIFE_VEST = registerItem(
-			"new_and_improved_state_of_the_art_life_vest");
+	public static final Item NEW_AND_IMPROVED_STATE_OF_THE_ART_LIFE_VEST = registerItem("new_and_improved_state_of_the_art_life_vest");
 	public static final Item BACKPACK = registerItem("backpack");
-	
 
 	private static Item registerItem(String name) {
 		Identifier id = Identifier.of(AlFredo.MOD_ID, name);
@@ -28,7 +26,7 @@ public class ModItems {
 			case "thrust_bomb":
 				return Registry.register(Registries.ITEM, id, new ThrustBombItem(settings.maxCount(32)));
 			case "backpack":
-				return Registry.register(Registries.ITEM, id, new BackpackItem(settings));
+				return Registry.register(Registries.ITEM, id, new BackpackItem(settings.maxCount(16)));
 		}
 		
 		return Registry.register(Registries.ITEM, id, new Item(settings));
@@ -42,9 +40,5 @@ public class ModItems {
 			entries.add(NEW_AND_IMPROVED_STATE_OF_THE_ART_LIFE_VEST);
 			entries.add(BACKPACK);
 		});
-		ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(entries -> {
-			//entries.add(WIRE);
-		});
-
 	}
 }

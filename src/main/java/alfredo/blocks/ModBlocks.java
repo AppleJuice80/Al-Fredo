@@ -15,12 +15,9 @@ import net.minecraft.registry.RegistryKeys;
 import net.minecraft.util.Identifier;
 
 public class ModBlocks {
-	public static final Block PLANT_BOMB = registerBlock("plant_bomb",
-			AbstractBlock.Settings.create().strength(0.25f).sounds(BlockSoundGroup.GRASS));// before sounds, .requiresTool()
+	public static final Block PLANT_BOMB = registerBlock("plant_bomb", AbstractBlock.Settings.create().strength(0.25f).sounds(BlockSoundGroup.GRASS));
 	
-	public static final Block WIRE = registerBlock("wire",
-			AbstractBlock.Settings.create().sounds(BlockSoundGroup.WOOD));
-
+	public static final Block WIRE = registerBlock("wire", AbstractBlock.Settings.create().sounds(BlockSoundGroup.WOOD));
 
 	private static Block registerBlock(String name, AbstractBlock.Settings block_settings) {
 		Identifier id = Identifier.of(AlFredo.MOD_ID, name);

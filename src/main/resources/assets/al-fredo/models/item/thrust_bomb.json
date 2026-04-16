@@ -13,6 +13,11 @@
 			"translation": [0, 3.75, 1.5]
 		}
     },
+    "rarity": "EPIC",
+    "enableRanged": true,
+    "shootConstantly": false,
+    "rangedItemChargesPower": true,
+    "animation": "spear",
     "groups": [
         {
             "name": "thrustable_explosive"

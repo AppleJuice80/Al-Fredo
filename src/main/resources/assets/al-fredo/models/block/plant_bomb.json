@@ -5,8 +5,8 @@
         "south": "al-fredo:block/plant_bomb",
         "east": "al-fredo:block/plant_bomb",
         "west": "al-fredo:block/plant_bomb",
-        "up": "al-fredo:block/plant_bomb",
-        "down": "al-fredo:block/plant_bomb",
+        "up": "minecraft:block/loom_top",
+        "down": "minecraft:block/black_concrete",
         "particle": "al-fredo:block/plant_bomb"
     }
 }
