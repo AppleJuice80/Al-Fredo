@@ -25,7 +25,7 @@ public class ThrustBombProjectileModel extends EntityModel<ProjectileEntityRende
 	public static TexturedModelData getTexturedModelData() {
 		ModelData model_data = new ModelData();
 		ModelPartData model_part_data = model_data.getRoot();
-		model_part_data.addChild("thrust_bomb", ModelPartBuilder.create().cuboid("whole thing", -5f, -6f, 0f, 10f, 12f, 0f, new Dilation(1.0f)), ModelTransform.NONE);
+		model_part_data.addChild("thrust_bomb", ModelPartBuilder.create().cuboid("whole thing", -5f, -6f, 0f, 10f, 12f, 0f, new Dilation(1.0f)), ModelTransform.rotation(0f, 0f, 3.14159265358979f));
 		
 		return TexturedModelData.of(model_data, 10, 12);// width, height
 	}

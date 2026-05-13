@@ -10,10 +10,8 @@ import net.minecraft.client.render.entity.state.ProjectileEntityRenderState;
 import net.minecraft.client.render.state.CameraRenderState;
 import net.minecraft.client.util.math.MatrixStack;
 import net.minecraft.util.Identifier;
-import net.minecraft.util.math.RotationAxis;
 
-public class BackpackProjectileRenderer
-		extends EntityRenderer<BackpackProjectileEntity, ProjectileEntityRenderState> {
+public class BackpackProjectileRenderer extends EntityRenderer<BackpackProjectileEntity, ProjectileEntityRenderState> {
 	protected BackpackProjectileModel model;
 	
 	public BackpackProjectileRenderer(EntityRendererFactory.Context ctx) {
@@ -27,14 +25,10 @@ public class BackpackProjectileRenderer
 	}
 
 	@Override
-	public void render(ProjectileEntityRenderState render_state, MatrixStack matrices, OrderedRenderCommandQueue queue,
-			CameraRenderState camera_state) {
+	public void render(ProjectileEntityRenderState render_state, MatrixStack matrices, OrderedRenderCommandQueue queue, CameraRenderState camera_state) {
 		matrices.push();
 
 		matrices.translate(0.0F, 0.15F, 0.0F);
-		//matrices.multiply(RotationAxis.POSITIVE_Y.rotationDegrees(render_state.yaw - 90.0F));
-		//matrices.multiply(RotationAxis.POSITIVE_Z.rotationDegrees(render_state.pitch));
-		matrices.multiply(RotationAxis.POSITIVE_X.rotationDegrees(180f));
 		matrices.multiply(camera_state.orientation);
 
 		queue.submitModel(this.model, render_state, matrices,

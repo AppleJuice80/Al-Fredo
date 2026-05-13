@@ -25,7 +25,7 @@ public class BackpackProjectileModel extends EntityModel<ProjectileEntityRenderS
 	public static TexturedModelData getTexturedModelData() {
 		ModelData modelData = new ModelData();
 		ModelPartData modelPartData = modelData.getRoot();
-		modelPartData.addChild("backpack", ModelPartBuilder.create().uv(0, 0).cuboid("whole thing", -6.5f, -7f, 0f, 13f, 14f, 0.0f, new Dilation(32.0f)), ModelTransform.NONE);
+		modelPartData.addChild("backpack", ModelPartBuilder.create().uv(0, 0).cuboid("whole thing", -6.5f, -7f, 0f, 13f, 14f, 0.0f, new Dilation(2.0f)), ModelTransform.rotation(0f, 0f, 3.14159265358979f));
 		
 		return TexturedModelData.of(modelData, 13, 14);// width, height
 	}
