@@ -22,7 +22,7 @@ public class ModVillagers {
 
     public static final RegistryKey<VillagerProfession> TERRORIST_KEY = RegistryKey.of(RegistryKeys.VILLAGER_PROFESSION,
             Identifier.of(AlFredo.MOD_ID, "terrorist"));
-    private static final VillagerProfession TERRORIST = registerProfession("terrorist", AL_FREDO_POI_KEY);
+    public static final VillagerProfession TERRORIST = registerProfession("terrorist", AL_FREDO_POI_KEY);
 
     private static VillagerProfession registerProfession(String name, RegistryKey<PointOfInterestType> type) {
         return Registry.register(Registries.VILLAGER_PROFESSION, Identifier.of(AlFredo.MOD_ID, name),
