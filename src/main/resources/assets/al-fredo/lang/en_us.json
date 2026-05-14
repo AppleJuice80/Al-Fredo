@@ -9,5 +9,7 @@
 	"block.al-fredo.wire": "Wire",
 
 	"entity.al-fredo.thrust_bomb": "Thrust Bomb",
-	"entity.al-fredo.backpack": "Backpack"
+	"entity.al-fredo.backpack": "Backpack",
+
+	"entity.minecraft.villager.al-fredo.terrorist": "Terrorist"
 }

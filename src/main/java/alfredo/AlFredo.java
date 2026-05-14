@@ -6,6 +6,7 @@ import org.slf4j.LoggerFactory;
 import alfredo.items.ModItems;
 import alfredo.blocks.ModBlocks;
 import alfredo.entities.ModEntities;
+import alfredo.villagers.ModVillagers;
 
 import net.fabricmc.api.ModInitializer;
 
@@ -27,5 +28,6 @@ public class AlFredo implements ModInitializer {
 		ModItems.registerModItems();
 		ModBlocks.registerModBlocks();
 		ModEntities.registerModEntities();
+		ModVillagers.registerModVillagers();
 	}
 }

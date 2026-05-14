@@ -1,0 +1,9 @@
+{
+    "replace": false,
+    "values" : [
+        {
+            "id": "al-fredo:al_fredo_poi",
+            "required": false
+        }
+    ]
+}
