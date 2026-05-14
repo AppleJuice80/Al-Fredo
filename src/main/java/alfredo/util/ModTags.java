@@ -9,6 +9,8 @@ import net.minecraft.util.Identifier;
 
 public class ModTags {
     public static class Blocks {
+        public static final TagKey<Block> TERROR_MATERIAL = createTag("terror_material");
+
         private static TagKey<Block> createTag(String name) {
             return TagKey.of(RegistryKeys.BLOCK, Identifier.of(AlFredo.MOD_ID, name));
         }
