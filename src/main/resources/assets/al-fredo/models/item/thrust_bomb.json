@@ -20,7 +20,7 @@
     "animation": "spear",
     "groups": [
         {
-            "name": "thrustable_explosive"
+            "name": "thrustable_explosives"
         }
     ]
 }

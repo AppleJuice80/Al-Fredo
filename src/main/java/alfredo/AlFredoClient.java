@@ -1,18 +1,21 @@
 package alfredo;
 
-//import alfredo.blocks.ModBlocks;
+import alfredo.blocks.ModBlocks;
 import alfredo.entities.ModEntities;
 import alfredo.entities.client.BackpackProjectileModel;
 import alfredo.entities.client.BackpackProjectileRenderer;
 import alfredo.entities.client.ThrustBombProjectileModel;
 import alfredo.entities.client.ThrustBombProjectileRenderer;
 import net.fabricmc.api.ClientModInitializer;
+import net.fabricmc.fabric.api.client.rendering.v1.BlockRenderLayerMap;
 import net.fabricmc.fabric.api.client.rendering.v1.EntityModelLayerRegistry;
+import net.minecraft.client.render.BlockRenderLayer;
 import net.minecraft.client.render.entity.EntityRendererFactories;
 
 public class AlFredoClient implements ClientModInitializer {
 	@Override
 	public void onInitializeClient() {
+		BlockRenderLayerMap.putBlock(ModBlocks.WIRE, BlockRenderLayer.CUTOUT);
 		
 		EntityModelLayerRegistry.registerModelLayer(ThrustBombProjectileModel.THRUST_BOMB,
 				ThrustBombProjectileModel::getTexturedModelData);
