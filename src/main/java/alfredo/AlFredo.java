@@ -11,9 +11,9 @@ import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.object.builder.v1.trade.TradeOfferHelper;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
+import net.minecraft.util.Identifier;
 import net.minecraft.village.TradeOffer;
 import net.minecraft.village.TradedItem;
-import net.minecraft.util.Identifier;
 
 public class AlFredo implements ModInitializer {
 	public static final String MOD_ID = "al-fredo";
@@ -39,7 +39,6 @@ public class AlFredo implements ModInitializer {
 			factories.add((world, entity, random) -> new TradeOffer(
 				new TradedItem(Items.EMERALD, 3),
 				new ItemStack(ModItems.THRUST_BOMB, 2), 7, 2, 0.04f));
-			
 		});
 		TradeOfferHelper.registerVillagerOffers(ModVillagers.TERRORIST_KEY, 2, factories -> {
 			factories.add((world, entity, random) -> new TradeOffer(
@@ -48,7 +47,6 @@ public class AlFredo implements ModInitializer {
 			factories.add((world, entity, random) -> new TradeOffer(
 				new TradedItem(ModItems.THRUST_BOMB, 5),
 				new ItemStack(ModBlocks.PLANT_BOMB, 2), 7, 4, 0.04f));
-			
 		});
 		TradeOfferHelper.registerWanderingTraderOffers(factories -> {
 			factories.addAll(Identifier.of(AlFredo.MOD_ID, "wire_for_redstone"), (world, entity, random) -> new TradeOffer(
