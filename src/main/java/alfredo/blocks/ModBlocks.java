@@ -1,6 +1,8 @@
 package alfredo.blocks;
 
 import alfredo.AlFredo;
+import alfredo.blocks.custom.PlantBombBlock;
+import alfredo.blocks.custom.WireBlock;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
@@ -15,17 +17,22 @@ import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.Identifier;
 
 public class ModBlocks {
-	public static final Block PLANT_BOMB = registerBlock("plant_bomb", AbstractBlock.Settings.create().strength(0.25f).sounds(BlockSoundGroup.GRASS));
+	public static final Block PLANT_BOMB = registerBlock("plant_bomb", AbstractBlock.Settings.create().strength(0.25f).sounds(BlockSoundGroup.GRASS).nonOpaque());
 	
 	public static final Block WIRE = registerBlock("wire", AbstractBlock.Settings.create().sounds(BlockSoundGroup.WOOD).nonOpaque());
 
 	private static Block registerBlock(String name, AbstractBlock.Settings block_settings) {
+		Block block;
 		Identifier id = Identifier.of(AlFredo.MOD_ID, name);
 		RegistryKey<Item> itemkey = RegistryKey.of(RegistryKeys.ITEM, id);
 		RegistryKey<Block> blockkey = RegistryKey.of(RegistryKeys.BLOCK, id);
 
 		Item.Settings itemsettings = new Item.Settings().registryKey(itemkey);
-		Block block = new Block(block_settings.registryKey(blockkey));
+		if (name.equals("plant_bomb")) {
+			block = new PlantBombBlock(block_settings.registryKey(blockkey));
+			AlFredo.LOGGER.info("Initialized PBB");}
+		else if (name.equals("wire")) block = new WireBlock(block_settings.registryKey(blockkey));
+		else block = new Block(block_settings);
 
 		Registry.register(Registries.ITEM, id, new BlockItem(block, itemsettings));
 		return Registry.register(Registries.BLOCK, id, block);

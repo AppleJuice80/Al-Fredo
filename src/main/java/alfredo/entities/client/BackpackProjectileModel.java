@@ -15,6 +15,7 @@ import net.minecraft.util.Identifier;
 
 public class BackpackProjectileModel extends EntityModel<ProjectileEntityRenderState> {
 	public static final EntityModelLayer BACKPACK = new EntityModelLayer(Identifier.of(AlFredo.MOD_ID, "backpack"), "main");
+	@SuppressWarnings("unused")
 	private final ModelPart backpack;
 
 	public BackpackProjectileModel(ModelPart root) {

@@ -15,6 +15,7 @@ import net.minecraft.util.Identifier;
 
 public class ThrustBombProjectileModel extends EntityModel<ProjectileEntityRenderState> {
 	public static final EntityModelLayer THRUST_BOMB = new EntityModelLayer(Identifier.of(AlFredo.MOD_ID, "thrust_bomb"), "main");
+	@SuppressWarnings("unused")
 	private final ModelPart thrust_bomb;
 
 	public ThrustBombProjectileModel(ModelPart root) {

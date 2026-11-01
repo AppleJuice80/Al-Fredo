@@ -5,7 +5,9 @@ import org.slf4j.LoggerFactory;
 
 import alfredo.blocks.ModBlocks;
 import alfredo.entities.ModEntities;
+import alfredo.blocks.entity.ModBlockEntities;
 import alfredo.items.ModItems;
+import alfredo.screens.ModScreenHandlers;
 import alfredo.villagers.ModVillagers;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.object.builder.v1.trade.TradeOfferHelper;
@@ -33,7 +35,10 @@ public class AlFredo implements ModInitializer {
 		ModItems.registerModItems();
 		ModBlocks.registerModBlocks();
 		ModEntities.registerModEntities();
+		ModBlockEntities.registerBlockEntities();
 		ModVillagers.registerModVillagers();
+
+		ModScreenHandlers.registerScreenHandlers();
 
 		TradeOfferHelper.registerVillagerOffers(ModVillagers.TERRORIST_KEY, 1, factories -> {
 			factories.add((world, entity, random) -> new TradeOffer(

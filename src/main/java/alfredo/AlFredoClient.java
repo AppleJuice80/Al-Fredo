@@ -1,15 +1,21 @@
 package alfredo;
 
 import alfredo.blocks.ModBlocks;
+import alfredo.blocks.entity.ModBlockEntities;
+import alfredo.blocks.entity.renderer.PlantBombBlockEntityRenderer;
 import alfredo.entities.ModEntities;
 import alfredo.entities.client.BackpackProjectileModel;
 import alfredo.entities.client.BackpackProjectileRenderer;
 import alfredo.entities.client.ThrustBombProjectileModel;
 import alfredo.entities.client.ThrustBombProjectileRenderer;
+import alfredo.screens.ModScreenHandlers;
+import alfredo.screens.custom.PlantBombScreen;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.client.rendering.v1.BlockRenderLayerMap;
 import net.fabricmc.fabric.api.client.rendering.v1.EntityModelLayerRegistry;
+import net.minecraft.client.gui.screen.ingame.HandledScreens;
 import net.minecraft.client.render.BlockRenderLayer;
+import net.minecraft.client.render.block.entity.BlockEntityRendererFactories;
 import net.minecraft.client.render.entity.EntityRendererFactories;
 
 public class AlFredoClient implements ClientModInitializer {
@@ -24,5 +30,8 @@ public class AlFredoClient implements ClientModInitializer {
 		EntityModelLayerRegistry.registerModelLayer(BackpackProjectileModel.BACKPACK,
 				BackpackProjectileModel::getTexturedModelData);
 		EntityRendererFactories.register(ModEntities.BACKPACK, BackpackProjectileRenderer::new);
+
+		BlockEntityRendererFactories.register(ModBlockEntities.PLANTBOMB_BE, PlantBombBlockEntityRenderer::new);
+		HandledScreens.register(ModScreenHandlers.PLANTBOMB_SCREEN_HANDLER, PlantBombScreen::new);
 	}
 }
